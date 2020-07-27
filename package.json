@@ -1,0 +1,46 @@
+{
+  "name": "movies",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Simas Dei",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "clean": "rimraf build coverage junit.xml src/**/*.js src/**/*.js.map test/**/*.js",
+    "clean:all": "yarn clean && rimraf node_modules",
+    "start": "nodemon --files src/index.ts",
+    "test": "jest",
+    "test:watch": "yarn test -- --watchAll",
+    "test:debugger": "node --inspect-brk node_modules/.bin/jest-ts --runInBand --testTimeout=300000",
+    "test:debugger:watch": "yarn test:debugger -- --watchAll",
+    "lint": "eslint \"*/**/*.ts\" --quiet --fix",
+    "lint:all": "tsc && yarn lint",
+    "check-deps": "yarn audit && ncu"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.1",
+    "@types/mongodb": "^3.5.4",
+    "@types/morgan": "^1.7.37",
+    "@types/node": "^13.7.0",
+    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@typescript-eslint/parser": "^2.15.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.1.0",
+    "jest-date-mock": "^1.0.8",
+    "jest-junit": "^10.0.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.2.0",
+    "ts-loader": "^8.0.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.9.7",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
