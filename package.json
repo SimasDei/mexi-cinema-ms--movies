@@ -42,7 +42,7 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "helmet": "^3.23.3",
     "mongodb": "^3.5.9",
     "morgan": "^1.10.0"
